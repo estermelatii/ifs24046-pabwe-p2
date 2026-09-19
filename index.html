@@ -14,12 +14,12 @@
     <div class="nav-container">
       <a href="index.html" class="logo">
         <div class="logo-mark">
-          <img src="assets/css/images/estermind.png" alt="EsterMind AI">
+          <img src="assets/css/images/estermind.png" alt="">
         </div>
         Ester<span>Mind</span> AI
       </a>
 
-      <nav>
+      <nav aria-label="Navigasi utama">
         <ul class="nav-links" id="navLinks">
           <li><a href="#layanan">Layanan</a></li>
           <li><a href="#tentang">Tentang</a></li>
@@ -30,13 +30,15 @@
         </ul>
       </nav>
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" id="hamburger" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navLinks">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
   </header>
+
+  <main id="main-content">
 
   <!-- ========== HERO ========== -->
   <section class="hero">
@@ -82,9 +84,9 @@
 
         <div class="hero-card">
           <div class="icon-circle">
-            <img src="assets/css/images/estermind.png" alt="EsterMind AI">
+            <img src="assets/css/images/estermind.png" alt="">
           </div>
-          <h3>AI yang Siap Produksi</h3>
+          <h2 class="hero-card-title">AI yang Siap Produksi</h2>
           <p>Dari prototipe hingga deployment — kami hadir di setiap tahap perjalanan AI Anda.</p>
         </div>
       </div>
@@ -221,6 +223,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
     <div class="container">
@@ -228,7 +232,7 @@
         <div class="footer-brand">
           <a href="index.html" class="logo">
             <div class="logo-mark">
-          <img src="assets/css/images/estermind.png" alt="EsterMind AI">
+          <img src="assets/css/images/estermind.png" alt="">
         </div>
             Ester<span>Mind</span> AI
           </a>
@@ -236,7 +240,7 @@
         </div>
 
         <div class="footer-links">
-          <h4>Navigasi</h4>
+          <h3>Navigasi</h3>
           <ul>
             <li><a href="#layanan">Layanan</a></li>
             <li><a href="#tentang">Tentang</a></li>
@@ -247,7 +251,7 @@
         </div>
 
         <div class="footer-links">
-          <h4>Kontak</h4>
+          <h3>Kontak</h3>
           <ul>
             <li>hello@estermind.ai</li>
             <li>+62 812-3456-7890</li>

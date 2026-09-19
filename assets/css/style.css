@@ -21,8 +21,8 @@
   --white: #ffffff;
 
   --text: #1E4A7A;
-  --text-soft: #5A7FA8;
-  --text-muted: #8AA4C4;
+  --text-soft: #3D5A7A;
+  --text-muted: #4A6A8A;
 
   --border: rgba(123, 183, 255, 0.28);
   --border-soft: rgba(156, 201, 255, 0.4);
@@ -122,7 +122,7 @@ ul { list-style: none; }
 }
 .nav-links { display: flex; align-items: center; gap: 1.6rem; }
 .nav-links a {
-  font-weight: 500; font-size: 0.92rem; color: var(--text-soft);
+  font-weight: 500; font-size: 0.92rem; color: #3D5A7A;
   transition: var(--transition); position: relative;
 }
 .nav-links a:not(.btn)::after {
@@ -320,7 +320,8 @@ ul { list-style: none; }
   image-rendering: auto;
 }
 .hero-card .icon-circle::before { display: none; }
-.hero-card h3 {
+.hero-card h3,
+.hero-card .hero-card-title {
   font-family: var(--font-display); font-size: 1.75rem; font-weight: 600;
   margin-bottom: 0.65rem; color: var(--navy-dark);
   letter-spacing: -0.01em;
@@ -479,7 +480,7 @@ ul { list-style: none; }
 .contact-form .btn-primary:hover { background: var(--blue-pale); transform: translateY(-2px); }
 
 .footer {
-  background: var(--navy-dark); color: rgba(255, 255, 255, 0.7);
+  background: var(--navy-dark); color: rgba(255, 255, 255, 0.88);
   padding: 3.75rem 0 1.5rem; border-top: 1px solid rgba(123, 183, 255, 0.15);
 }
 .footer-content {
@@ -492,7 +493,7 @@ ul { list-style: none; }
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .footer-brand p { font-size: 0.92rem; max-width: 280px; line-height: 1.7; }
-.footer-links h4 {
+.footer-links h3, .footer-links h4 {
   color: var(--blue-soft); font-family: var(--font-display);
   font-size: 1.15rem; font-weight: 600; margin-bottom: 0.95rem;
 }
@@ -531,113 +532,3 @@ ul { list-style: none; }
   .section { padding: 3.75rem 0; }
   .contact-form { padding: 1.5rem; }
 }
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(rgba(74, 143, 224, 0.18) 1.4px, transparent 1.4px);
-  background-size: 26px 26px;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.55;
-}
-/* Pastikan konten tetap di atas tekstur */
-.navbar, .hero, .section, .about, .contact, .footer {
-  position: relative;
-  z-index: 1;
-}
-
-/* 2) Lingkaran putus-putus dekoratif di belakang kartu visual hero,
-      nambah kedalaman tanpa nyentuh .hero-visual aslinya sama sekali
-      (ini pseudo-element baru di elemen yang belum pernah dipakai). */
-.hero-visual::before {
-  content: "";
-  position: absolute;
-  width: 430px;
-  height: 430px;
-  border: 2px dashed rgba(123, 183, 255, 0.35);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: spin-slow 40s linear infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-@keyframes spin-slow {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* 3) Ikon kartu Layanan dikasih warna beda-beda per kartu,
-      bukan seragam biru semua — pola berulang tiap 3 kartu. */
-.services-grid .service-card:nth-child(6n+1) .service-icon {
-  background: linear-gradient(135deg, #FFE3EF, #FFC4DE);
-  color: #E0578C;
-}
-.services-grid .service-card:nth-child(6n+2) .service-icon {
-  background: linear-gradient(135deg, #FFF3D6, #FFE2A8);
-  color: #C9891C;
-}
-.services-grid .service-card:nth-child(6n+3) .service-icon {
-  background: linear-gradient(135deg, #DEFBEE, #B9F3D4);
-  color: #16A164;
-}
-.services-grid .service-card:nth-child(6n+4) .service-icon {
-  background: linear-gradient(135deg, #EDE4FF, #D9C8FF);
-  color: #7C4FE0;
-}
-.services-grid .service-card:nth-child(6n+5) .service-icon {
-  background: linear-gradient(135deg, var(--blue-pale), var(--blue-soft));
-  color: var(--blue-deep);
-}
-.services-grid .service-card:nth-child(6n+6) .service-icon {
-  background: linear-gradient(135deg, #FFE9DC, #FFD1B3);
-  color: #D9701E;
-}
-
-/* 4) Garis aksen kecil melengkung di bawah tiap judul section,
-      biar enggak cuma teks polos + garis lurus bawaan browser. */
-.section-header h2::after,
-.about-text h2::after {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 5px;
-  margin: 0.9rem auto 0;
-  background: linear-gradient(90deg, var(--blue-deep), var(--blue), var(--blue-pale));
-  border-radius: 99px;
-}
-.about-text h2::after { margin-left: 0; }
-
-/* 5) Stat number dikasih sedikit "denyut" halus biar kerasa hidup,
-      bukan angka statis. Sangat subtle, tidak mengganggu. */
-.stat-card .stat-number {
-  animation: pulse-soft 3.5s ease-in-out infinite;
-}
-@keyframes pulse-soft {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-}
-
-/* 6) Border gradasi tipis di card layanan saat hover, sebagai
-      lapisan tambahan di atas efek hover yang sudah ada. */
-.service-card {
-  position: relative;
-}
-.service-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius);
-  padding: 1.5px;
-  background: linear-gradient(135deg, var(--blue), var(--blue-pale), var(--blue-deep));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: var(--transition);
-  pointer-events: none;
-}
-.service-card:hover::after { opacity: 1; }
