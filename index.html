@@ -70,7 +70,6 @@
       </div>
 
       <div class="hero-visual">
-        <!-- decorative blobs -->
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
@@ -226,14 +225,14 @@
   </main>
 
   <!-- ========== FOOTER ========== -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
           <a href="index.html" class="logo">
             <div class="logo-mark">
-          <img src="assets/css/images/estermind.png" alt="">
-        </div>
+              <img src="assets/css/images/estermind.png" alt="">
+            </div>
             Ester<span>Mind</span> AI
           </a>
           <p>Solusi kecerdasan buatan yang praktis, terukur, dan siap produksi untuk bisnis modern.</p>
@@ -270,7 +269,8 @@
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("navLinks");
     hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
+      const open = navLinks.classList.toggle("open");
+      hamburger.setAttribute("aria-expanded", open);
     });
   </script>
 </body>
