@@ -133,6 +133,27 @@ ul { list-style: none; }
 }
 .nav-links a:not(.btn):hover { color: var(--blue-deep); }
 .nav-links a:not(.btn):hover::after { width: 100%; }
+
+/* Tombol di navbar harus tetap teks putih */
+.nav-links a.btn,
+.nav-links a.btn-primary,
+.nav-links .btn-primary {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: #1E4A7A !important;
+  border: none;
+}
+.nav-links a.btn:hover,
+.nav-links a.btn-primary:hover {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  background: #143356 !important;
+}
+.nav-links a.btn::after,
+.nav-links a.btn-primary::after {
+  display: none !important;
+}
+
 .hamburger {
   display: none; flex-direction: column; gap: 5px; cursor: pointer;
   background: none; border: none; padding: 4px;
