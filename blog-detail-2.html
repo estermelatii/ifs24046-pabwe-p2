@@ -7,18 +7,18 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- CSS kustom blog (shared, tidak di-duplikasi inline) -->
+  <!-- CSS kustom blog (shared) -->
   <link rel="stylesheet" href="assets/css/blog.css">
 </head>
 <body>
 
-  <!-- Halaman detail artikel 2: 5 Tips Prompt Engineering untuk Hasil LLM yang Lebih Baik (Bootstrap 5) -->
+  <!-- Detail artikel: 5 Tips Prompt Engineering untuk Hasil LLM yang Lebih Baik -->
 
   <!-- Navigasi utama -->
   <nav class="navbar navbar-expand-lg sticky-top" aria-label="Navigasi utama">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="assets/img/estermind.png" alt="" width="40" height="40">
+        <img src="assets/img/estermind.png" alt="" aria-hidden="true" width="40" height="40">
         Ester<span>Mind</span> AI
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Buka menu navigasi">
@@ -40,6 +40,7 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
+
             <!-- Breadcrumb -->
             <nav aria-label="breadcrumb" class="mb-3">
               <ol class="breadcrumb">
@@ -49,60 +50,78 @@
               </ol>
             </nav>
 
-            <!-- Meta artikel -->
-            <span class="badge badge-ai mb-3"><i class="bi bi-tools me-1" aria-hidden="true"></i> Tools</span>
-            <h1 class="fw-bold mb-3">5 Tips Prompt Engineering untuk Hasil LLM yang Lebih Baik</h1>
-            <div class="d-flex flex-wrap align-items-center gap-3 text-muted small mb-4">
-              <span><i class="bi bi-person me-1" aria-hidden="true"></i> Andi Wijaya</span>
-              <span><i class="bi bi-calendar me-1" aria-hidden="true"></i> 8 September 2026</span>
-              <span><i class="bi bi-clock me-1" aria-hidden="true"></i> 5 menit baca</span>
-            </div>
+            <!-- Header artikel -->
+            <header class="mb-4">
+              <span class="badge badge-ai mb-3"><i class="bi bi-tools me-1" aria-hidden="true"></i> Tools</span>
+              <h1 class="fw-bold mb-3">5 Tips Prompt Engineering untuk Hasil LLM yang Lebih Baik</h1>
+              <div class="d-flex flex-wrap align-items-center gap-3 text-muted small">
+                <span><i class="bi bi-person me-1" aria-hidden="true"></i> Andi Wijaya</span>
+                <span><i class="bi bi-calendar me-1" aria-hidden="true"></i> 8 September 2026</span>
+                <span><i class="bi bi-clock me-1" aria-hidden="true"></i> 5 menit baca</span>
+              </div>
+            </header>
 
             <!-- Gambar sampul -->
-            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&h=600&fit=crop" alt="Ilustrasi artikel Tools" class="article-cover mb-4 shadow-sm" width="1200" height="600">
+            <figure class="mb-4">
+              <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&h=600&fit=crop" alt="Ilustrasi Tools" class="article-cover shadow-sm" width="1200" height="600">
+            </figure>
 
-            <!-- Isi artikel -->
+            <!-- Isi artikel (tiap section unik per topik) -->
             <div class="article-body">
-              <p>Kualitas jawaban dari large language model (LLM) sangat dipengaruhi oleh cara kita menulis <strong>prompt</strong>. Prompt yang jelas menghasilkan output yang lebih akurat dan relevan.</p>
-              <div class="alert alert-info" role="alert"><strong>Intinya:</strong> Perlakukan prompt seperti brief kerja yang jelas.</div>
-              <h2>1. Tentukan peran model</h2>
-              <p>Contoh: “Anda adalah analis data berpengalaman.” Role membantu menyesuaikan gaya dan kedalaman jawaban.</p>
-              <h2>2. Berikan konteks yang cukup</h2>
-              <p>Sebutkan audiens, tujuan, dan batasan (panjang, nada, format).</p>
-              <h2>3. Minta format output yang jelas</h2>
-              <p>Daftar, tabel, atau JSON — sebutkan secara eksplisit agar model mengikutinya.</p>
-              <blockquote>“Prompt engineering adalah praktik komunikasi yang jelas dengan sistem yang peka terhadap instruksi.”</blockquote>
-              <h2>4. Gunakan contoh (few-shot)</h2>
-              <p>Tampilkan 1–3 contoh input–output untuk tugas yang sangat spesifik.</p>
-              <h2>5. Iterasi dan evaluasi</h2>
-              <p>Uji, perbaiki, dan simpan prompt yang sudah bagus sebagai template tim.</p>
+              
+              <section class="article-intro" aria-label="Pengantar">
+                <p>Kualitas jawaban dari large language model (LLM) sangat dipengaruhi oleh cara kita menulis <strong>prompt</strong>. Prompt yang jelas menghasilkan output yang lebih akurat dan relevan.</p>
+                <div class="alert alert-info" role="alert"><strong>Intinya:</strong> Perlakukan prompt seperti brief kerja yang jelas.</div>
+              </section>
+              <section aria-labelledby="tip-1">
+                <h2 id="tip-1">1. Tentukan peran model</h2>
+                <p>Contoh: “Anda adalah analis data berpengalaman.” Role membantu menyesuaikan gaya dan kedalaman jawaban.</p>
+              </section>
+              <section aria-labelledby="tip-2">
+                <h2 id="tip-2">2. Berikan konteks yang cukup</h2>
+                <p>Sebutkan audiens, tujuan, dan batasan (panjang, nada, format).</p>
+              </section>
+              <section aria-labelledby="tip-3">
+                <h2 id="tip-3">3. Minta format output yang jelas</h2>
+                <p>Daftar, tabel, atau JSON — sebutkan secara eksplisit agar model mengikutinya.</p>
+                <blockquote>“Prompt engineering adalah praktik komunikasi yang jelas dengan sistem yang peka terhadap instruksi.”</blockquote>
+              </section>
+              <section aria-labelledby="tip-4">
+                <h2 id="tip-4">4. Gunakan contoh (few-shot)</h2>
+                <p>Tampilkan 1–3 contoh input–output untuk tugas yang sangat spesifik.</p>
+              </section>
+              <section aria-labelledby="tip-5">
+                <h2 id="tip-5">5. Iterasi dan evaluasi</h2>
+                <p>Uji, perbaiki, dan simpan prompt yang sudah bagus sebagai template tim.</p>
+              </section>
             </div>
 
             <!-- Tag -->
-            <div class="mt-4 pt-3 border-top">
+            <section class="mt-4 pt-3 border-top" aria-label="Tag artikel">
               <span class="text-muted small me-2">Tag:</span>
               <span class="badge bg-light text-secondary me-1">Prompt Engineering</span> <span class="badge bg-light text-secondary me-1">LLM</span> <span class="badge bg-light text-secondary me-1">Tools</span>
-            </div>
+            </section>
 
             <!-- Form komentar -->
-            <div class="mt-5 pt-4 border-top">
-              <h2 class="h5 fw-bold mb-3">Tinggalkan Komentar</h2>
+            <section class="mt-5 pt-4 border-top" aria-labelledby="komentar-heading">
+              <h2 id="komentar-heading" class="h5 fw-bold mb-3">Tinggalkan Komentar</h2>
               <form>
                 <div class="mb-3">
-                  <label for="nama-komentar" class="form-label">Nama</label>
-                  <input type="text" id="nama-komentar" name="nama" class="form-control" placeholder="Nama Anda" autocomplete="name">
+                  <label for="nama-komentar-2" class="form-label">Nama</label>
+                  <input type="text" id="nama-komentar-2" name="nama" class="form-control" placeholder="Nama Anda" autocomplete="name">
                 </div>
                 <div class="mb-3">
-                  <label for="isi-komentar" class="form-label">Komentar</label>
-                  <textarea id="isi-komentar" name="komentar" class="form-control" rows="4" placeholder="Tulis komentar Anda..."></textarea>
+                  <label for="isi-komentar-2" class="form-label">Komentar</label>
+                  <textarea id="isi-komentar-2" name="komentar" class="form-control" rows="4" placeholder="Tulis komentar Anda..."></textarea>
                 </div>
                 <button type="button" class="btn btn-brand">Kirim Komentar</button>
               </form>
-            </div>
+            </section>
 
             <div class="mt-4">
               <a href="blog.html" class="btn btn-outline-secondary btn-sm">Kembali ke Daftar Blog</a>
             </div>
+
           </div>
         </div>
       </div>
