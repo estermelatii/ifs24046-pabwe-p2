@@ -565,3 +565,8 @@ ul { list-style: none; }
   color: #1A4A7A !important;
   background: #D6E8F8 !important;
 }
+
+.btn-nav-cta {
+  padding: 0.55rem 1.35rem !important;
+  font-size: 0.875rem !important;
+}
