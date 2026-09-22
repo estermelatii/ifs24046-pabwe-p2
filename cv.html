@@ -17,30 +17,38 @@
 </head>
 <body class="bg-[#F7FBFF] text-[#1E4A7A] font-sans antialiased">
 
+  <!-- Header / navigasi -->
   <header class="bg-[#F7FBFF]/90 backdrop-blur sticky top-0 z-50 border-b border-[#4A8FE0]/15">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
       <a href="index.html" class="text-xl font-bold text-[#1E4A7A] flex items-center gap-2" style="font-family:'Cormorant Garamond',Georgia,serif">
-        <img src="assets/css/images/estermind.png" alt="" style="width:40px;height:40px;object-fit:contain;border-radius:10px;">
+        <img src="assets/img/estermind.png" alt="" width="40" height="40" style="width:40px;height:40px;object-fit:contain;border-radius:10px;">
         Ester<span style="color:#1E4A7A">Mind</span> AI
       </a>
       <nav aria-label="Navigasi utama" class="flex items-center gap-4 text-sm font-medium">
         <a href="index.html" class="text-[#1E4A7A] hover:text-brand transition">Beranda</a>
         <a href="blog.html" class="text-[#1E4A7A] hover:text-brand transition">Blog</a>
-        <a href="cv.html" class="text-brand font-bold">CV</a>
+        <a href="cv.html" class="text-brand font-bold" aria-current="page">CV</a>
         <a href="index.html#kontak" class="ml-1 px-3 py-1.5 rounded-full bg-brand text-white text-xs font-semibold hover:bg-brand-dark transition">Konsultasi</a>
       </nav>
     </div>
   </header>
 
+  <!-- Konten utama CV -->
   <main class="max-w-5xl mx-auto px-4 sm:px-6 py-10" id="main-content">
 
-    <header class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 mb-8">
+    <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 sm:p-8 mb-8" aria-labelledby="cv-name">
       <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
         <div class="w-28 h-28 rounded-full bg-gradient-to-br from-[#1E4A7A] to-[#2B65B5] shrink-0 shadow-md overflow-hidden">
-          <img src="assets/css/images/Screenshot 2026-09-14 092626.png" alt="Foto Ester Melati Manurung" class="w-full h-full object-cover">
+          <img
+            src="assets/img/Screenshot 2026-09-14 092626.png"
+            alt="Foto Ester Melati Manurung"
+            class="w-full h-full object-cover"
+            width="112"
+            height="112"
+          >
         </div>
         <div class="text-center sm:text-left flex-1">
-          <h1 class="text-2xl sm:text-3xl font-semibold text-[#1E4A7A] tracking-tight" style="font-family:'Cormorant Garamond',Georgia,serif">Ester Melati Manurung</h1>
+          <h1 id="cv-name" class="text-2xl sm:text-3xl font-semibold text-[#1E4A7A] tracking-tight" style="font-family:'Cormorant Garamond',Georgia,serif">Ester Melati Manurung</h1>
           <p class="text-brand font-semibold mt-1">Aspiring AI Engineer &amp; Full-Stack Developer</p>
           <p class="text-[#2D4A6F] text-sm mt-2 max-w-lg">Mahasiswa Informatika yang tertarik pada penerapan Artificial Intelligence dan pengembangan web modern.</p>
           <div class="flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 mt-4 text-sm text-[#1E4A7A]">
@@ -52,7 +60,7 @@
           </div>
         </div>
       </div>
-    </header>
+    </section>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
@@ -99,7 +107,7 @@
         <section class="bg-white rounded-2xl shadow-sm border border-slate-100 p-5 sm:p-6">
           <h2 class="text-sm font-bold uppercase tracking-wider text-brand mb-4">Pendidikan</h2>
           <div class="flex gap-4">
-            <div class="w-1 bg-brand rounded-full shrink-0"></div>
+            <div class="w-1 bg-brand rounded-full shrink-0" aria-hidden="true"></div>
             <div>
               <h3 class="font-semibold text-[#1A4A7A]">S1 Informatika</h3>
               <p class="text-sm text-[#2D4A6F]">Institut Teknologi Del · 2024 – Sekarang</p>
@@ -112,28 +120,28 @@
           <h2 class="text-sm font-bold uppercase tracking-wider text-brand mb-4">Pengalaman</h2>
           <div class="space-y-5">
             <div class="flex gap-4">
-              <div class="w-1 bg-accent rounded-full shrink-0"></div>
+              <div class="w-1 bg-accent rounded-full shrink-0" aria-hidden="true"></div>
               <div>
                 <h3 class="font-semibold text-[#1A4A7A]">Panitia PCA 2025</h3>
                 <p class="text-sm text-[#2D4A6F]">Organisasi kemahasiswaan · 2025</p>
               </div>
             </div>
             <div class="flex gap-4">
-              <div class="w-1 bg-accent rounded-full shrink-0"></div>
+              <div class="w-1 bg-accent rounded-full shrink-0" aria-hidden="true"></div>
               <div>
                 <h3 class="font-semibold text-[#1A4A7A]">Anggota MPM 2026</h3>
                 <p class="text-sm text-[#2D4A6F]">Organisasi kemahasiswaan · 2026</p>
               </div>
             </div>
             <div class="flex gap-4">
-              <div class="w-1 bg-accent rounded-full shrink-0"></div>
+              <div class="w-1 bg-accent rounded-full shrink-0" aria-hidden="true"></div>
               <div>
                 <h3 class="font-semibold text-[#1A4A7A]">SIGAP NUSANTARA</h3>
                 <p class="text-sm text-[#2D4A6F]">Kompetisi esai kesiapsiagaan kesehatan berbasis pemuda untuk daerah rawan bencana di Sumatera Utara (bersama Mutiara Y.H. Sianturi)</p>
               </div>
             </div>
             <div class="flex gap-4">
-              <div class="w-1 bg-accent rounded-full shrink-0"></div>
+              <div class="w-1 bg-accent rounded-full shrink-0" aria-hidden="true"></div>
               <div>
                 <h3 class="font-semibold text-[#1A4A7A]">TobaCulture</h3>
                 <p class="text-sm text-[#2D4A6F]">Proposal kompetisi GEMASTIK untuk aplikasi kamus budaya Batak interaktif</p>
@@ -168,6 +176,7 @@
     </div>
   </main>
 
+  <!-- Footer -->
   <footer class="border-t border-slate-200 mt-8 py-6 text-center text-sm text-[#1E4A7A]" role="contentinfo">
     <p><a href="index.html" class="font-bold text-brand">Ester<span style="color:#1E4A7A">Mind</span> AI</a> · &copy; 2026</p>
   </footer>
